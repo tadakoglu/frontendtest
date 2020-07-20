@@ -1,0 +1,150 @@
+.navbar {
+    width:  100%;
+    height: 113px;
+    background-color: #121420;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+}
+
+.logo {    
+    margin-left: 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logoText{    
+      font-family: Rubik;
+      font-size: 32px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: 1.47px;
+      color: rgba(255, 255, 255, 0.8);
+}
+
+.slogan {    
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.sloganText{    
+    font-family: Rubik;
+    font-size: 18px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+ 
+.searchBar{
+    width: 30%;
+    height: 52px;
+    border-radius: 26px;
+    background-color: rgba(240, 240, 241, 0.15);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.searchBar .searchIconContainer{
+  float: left;
+  height: 100%;
+  display:flex;
+  align-items:center;
+}
+.searchBar .searchicon{
+  width: 20px;
+  height: 20px;
+}
+.searchBar input{
+    padding-left: 10px;
+    float: left;
+    height: 100%;
+    background-color: transparent;
+    border: 0px;
+    color: white;
+}
+.searchBar input::placeholder{
+   color: white;
+   font-weight: bold;
+}
+.searchBar input:focus{
+    outline: none;
+}
+
+.butonsContainer{
+  margin-right: 50px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  float: right;
+  color: white;
+}
+.loginBtn{
+    width: auto;
+    height: 53px;
+    border-radius: 8px;
+    background-color: #f27933;
+    box-shadow: rgba(240, 240, 241, 0.15);
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+}
+.loginBtn:hover{
+  background-color: #cf6222;
+}
+
+.cartBtn{
+    width: 60px;
+    height: 50px;  
+    background-image: url(../../../assets/icons/carticon.png);
+    background-size: cover;
+    position: relative;
+    cursor: pointer;
+}
+
+.itemsCount {
+    
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border: solid 1px #121420;
+    border-radius: 50%;
+    background-color: #f27933;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0px;
+    right: 0px;
+    text-align: center;
+
+  }
+
+
+
+  .panels {
+    width:  100%;
+    height: 100%;
+    bottom: 0px;
+ }
+ .leftpanel{
+  width:  50%;
+  height: 100%;
+  background-color: #3f414a; 
+  float: left;
+}
+ .rightpanel{
+    width:  50%;
+    height: 100%;
+    background-color: #ffffff;
+    float: right;
+ }
