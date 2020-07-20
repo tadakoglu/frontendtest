@@ -134,6 +134,7 @@
   .panels {
     width:  100%;
     min-height: 100%;
+    background-color: #3f414a; 
  }
  .leftpanel{
   width:  50%;
@@ -227,4 +228,122 @@
   letter-spacing: normal;
   color: rgba(255, 255, 255, 0.7);
   display: block;
+}
+
+
+.tabFont{
+  font-family: Rubik;
+  font-size: 24px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #2d2d2d;
+}
+.tab{
+  width: 100%;
+}
+.tabBtnArea{
+  width: 50%;
+  height: 80px;
+  float:left;
+
+}
+
+.tabBtn{
+  width: 100%;
+  height: 77px;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  
+}
+.tabBtnLine{
+  width: 100%;
+  height: 3px;
+  border-radius: 1.5px;
+  background-color: rgba(207, 210, 212, 0.5);
+ 
+  display: block;
+}
+.tabBtnLineActive{
+    width: 100%;
+    height: 3px;
+    border-radius: 1.5px;
+    background-color: #f18c51;
+    display: block;
+}
+
+.tabText {
+
+  font-family: Rubik;
+  font-size: 24px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #7e8987;
+}
+.tabTextActive {
+
+  font-family: Rubik;
+  font-size: 24px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #2d2d2d;
+}
+
+
+.FormText {
+  margin-right: 20px;
+  height: 64px;
+  font-family: Rubik;
+  font-size: 18px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121420;
+  white-space: nowrap;
+}
+.FormTextBox {
+  width: 60%;
+  height: 55px;
+  border-radius: 7px;
+  background-color: #ffffff;
+  border: 2px solid #ececec;
+}
+.formRow{
+  padding-left: 50px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  display: block;
+
+
+}
+
+ .btnSignUp {
+  width: 250px;
+  height: 53px;
+  border-radius: 7px;
+  background-color: #f27933;
+  text-align: center;
+  border: 2px solid #ececec;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  cursor:pointer;
+}
+.btnSignUp:hover:focus {
+  background-color: #8b4b25;
+
 }

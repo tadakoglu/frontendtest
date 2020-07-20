@@ -4,6 +4,7 @@ import { SignUpComponent } from './auth-module/sign-up/sign-up.component';
 
 
 const routes: Routes = [
+  { path: '', pathMatch: 'full', redirectTo:'kayit-ol' }, 
   { path: 'kayit-ol', component: SignUpComponent }
 ];
 

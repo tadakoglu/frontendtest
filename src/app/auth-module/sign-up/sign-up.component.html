@@ -34,23 +34,7 @@
                 <span class="hText">
                     Yüksek Kalite
                 </span>
-                
-                <span class="pText">
-                    Açıklama yazısı
-                </span>
-            </div>
 
-        </div>
-
-
-        <div class="row">
-            <div id="circle">
-            </div>
-            <div class="infoArea" >
-                <span class="hText">
-                    Yüksek Kalite
-                </span>
-              
                 <span class="pText">
                     Açıklama yazısı
                 </span>
@@ -64,21 +48,115 @@
             </div>
             <div class="infoArea">
                 <span class="hText">
-                    Yüksek Kalite
+                    Vadeli Ödeme
                 </span>
-               
+
                 <span class="pText">
                     Açıklama yazısı
                 </span>
             </div>
 
         </div>
-    
-    
-      
+
+
+        <div class="row">
+            <div id="circle">
+            </div>
+            <div class="infoArea">
+                <span class="hText">
+                    Sipariş Takibi
+                </span>
+
+                <span class="pText">
+                    Açıklama yazısı
+                </span>
+            </div>
+
+        </div>
+
+
+
 
     </div>
     <div class="rightpanel">
-        
+        <!-- <div class="tab">
+            <div class="tabBtnArea">
+                <div class="tabBtn">
+                    <span class="tabText">Giriş Yap</span>
+                </div>
+                <div class="tabBtnLine">
+
+                </div>
+            </div>
+
+            <div class="tabBtnArea">
+                <div class="tabBtn">
+                    <span class="tabTextActive">Üye Ol</span>
+                </div>
+                <div class="tabBtnLineActive">
+
+                </div>
+            </div>
+
+        </div> -->
+
+
+        <mat-tab-group [color]="'accent'">
+
+            <mat-tab label="Üye Ol">
+                <form #signUpForm="ngForm" (ngSubmit)="signUp(signUpForm)" novalidate>
+                    <div class="formRow">
+                        <label class="FormText">Eposta Adresi</label>
+                        <input class="FormTextBox" type="text" name="eposta" #eposta="ngModel"
+                            [(ngModel)]="userRegisterDtoModel.Email">
+                    </div>
+
+                    <div class="formRow">
+                        <label class="FormText">Vergi Kimlik No</label>
+                        <input class="FormTextBox" type="text" name="vergiNo">
+                    </div>
+
+
+                    <div class="formRow">
+                        <label class="FormText">Üye Adı</label>
+                        <input class="FormTextBox" type="text" name="uyeAdi" #uyeAdi="ngModel"
+                            [(ngModel)]="userRegisterDtoModel.Name">
+                    </div>
+
+                    <div class="formRow">
+                        <label class="FormText">Firma Adı</label>
+                        <input class="FormTextBox" type="text" name="firmaAdi">
+                    </div>
+
+                    <div class="formRow">
+                        <label class="FormText">Sorumlu Kişi</label>
+                        <input class="FormTextBox" type="text">
+                    </div>
+
+                    <div class="formRow">
+                        <label class="FormText">Sorumlu Kişi Telefon</label>
+                        <input class="FormTextBox" type="text">
+                    </div>
+
+                    <div class="formRow">
+                        <label class="FormText">Parola</label>
+                        <input class="FormTextBox" type="password" name="parola" #parola="ngModel"
+                            [(ngModel)]="userRegisterDtoModel.Password">
+                    </div>
+                    <div class="formRow">
+                        <label class="FormText">Parola Tekrar</label>
+                        <input class="FormTextBox" type="password" name="parolaTekrar" #parolaTekrar="ngModel"
+                            [(ngModel)]="userRegisterDtoModel.ConfirmPassword">
+                    </div>
+
+                    <button class="btnSignUp" type="submit">Üye Ol</button>
+                </form>
+
+            </mat-tab>
+            <mat-tab label="Giriş Yap">İçerik 1</mat-tab>
+        </mat-tab-group>
+
+
+
     </div>
 </div>
