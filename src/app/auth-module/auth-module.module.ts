@@ -8,8 +8,9 @@ import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
-    CommonModule,MatTabsModule,BrowserModule,FormsModule
+    CommonModule, MatTabsModule, BrowserModule, FormsModule
   ],
-  declarations: [SignUpComponent]
+  declarations: [SignUpComponent],
+  exports: [SignUpComponent]
 })
 export class AuthModuleModule { }

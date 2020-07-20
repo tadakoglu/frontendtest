@@ -102,30 +102,36 @@
 
 
         <mat-tab-group [color]="'accent'">
-            
+
             <mat-tab label="Üye Ol">
                 <form #signUpForm="ngForm" (ngSubmit)="signUp(signUpForm)" novalidate>
                     <div class="formRow">
                         <label class="FormText">Eposta Adresi</label>
-                        <input class="FormTextBox" type="text" name="eposta" #eposta="ngModel"
+                        <input class="FormTextBox" type="text" id="eposta" name="eposta" #eposta="ngModel"
                             [(ngModel)]="userRegisterDtoModel.Email">
                     </div>
 
                     <div class="formRow">
                         <label class="FormText">Vergi Kimlik No</label>
-                        <input class="FormTextBox" type="text" name="vergiNo">
-                    </div>
+                        <input class="FormTextBox"  type="text" >
+                    </div> 
 
 
                     <div class="formRow">
                         <label class="FormText">Üye Adı</label>
-                        <input class="FormTextBox" type="text" name="uyeAdi" #uyeAdi="ngModel"
+                        <input class="FormTextBox" type="text" id="uyeAdi" name="uyeAdi" #uyeAdi="ngModel"
                             [(ngModel)]="userRegisterDtoModel.Name">
                     </div>
+                    <div class="formRow">
+                        <label class="FormText">Üye Soyadı</label>
+                        <input class="FormTextBox" type="text" id="uyeSoyad" name="uyeSoyad" #uyeSoyad="ngModel"
+                            [(ngModel)]="userRegisterDtoModel.LastName">
+                    </div>
+
 
                     <div class="formRow">
                         <label class="FormText">Firma Adı</label>
-                        <input class="FormTextBox" type="text" name="firmaAdi">
+                        <input class="FormTextBox" type="text" id="firmaAdi" name="firmaAdi">
                     </div>
 
                     <div class="formRow">
@@ -140,18 +146,19 @@
 
                     <div class="formRow">
                         <label class="FormText">Parola</label>
-                        <input class="FormTextBox" type="password" name="parola" #parola="ngModel"
-                            [(ngModel)]="userRegisterDtoModel.Password">
+                        <input class="FormTextBox" id="parola" type="password" name="parola" #parola="ngModel"
+                            [(ngModel)]="userRegisterDtoModel">
                     </div>
+
                     <div class="formRow">
                         <label class="FormText">Parola Tekrar</label>
-                        <input class="FormTextBox" type="password" name="parolaTekrar" #parolaTekrar="ngModel"
-                            [(ngModel)]="userRegisterDtoModel.ConfirmPassword">
+                        <input class="FormTextBox" id="parolaTekrar" type="password" name="parolaTekrar"
+                            #parolaTekrar="ngModel" [(ngModel)]="userRegisterDtoModel.ConfirmPassword">
                     </div>
 
-                    <button class="btnSignUp" type="submit">Üye Ol</button>
-                </form>
 
+                </form>
+                <button class="btnSignUp" type="submit">Üye Ol</button>
             </mat-tab>
             <mat-tab label="Giriş Yap">İçerik 1</mat-tab>
         </mat-tab-group>

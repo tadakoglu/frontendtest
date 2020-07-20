@@ -15,19 +15,20 @@ export class SignUpComponent implements OnInit {
   ngOnInit() {
   }
   public userRegisterDtoModel: UserRegisterDto = new UserRegisterDto();
-  public informationMessage:string 
+  public informationMessage: string
 
   signUp(signUpForm: NgForm) {
 
-    this.authService.signUp(this.userRegisterDtoModel).subscribe( (answer:boolean)=>{
-      if(answer){ // eğer doğru ise üyelik başarılı
+    this.authService.signUp(this.userRegisterDtoModel).subscribe((answer: boolean) => {
+      if (answer) { // eğer doğru ise üyelik başarılı
         this.informationMessage = "Tebrikler, başarıyla üye oldunuz"
+        this.userRegisterDtoModel = new UserRegisterDto();
       }
-      else{ // üye olma başarısız
+      else { // üye olma başarısız
         this.informationMessage = "Üzgünüz, bir sorun oluştu."
       }
     })
-    
+
   }
 
 }
