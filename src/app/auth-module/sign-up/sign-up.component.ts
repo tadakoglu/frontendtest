@@ -18,7 +18,7 @@ export class SignUpComponent implements OnInit {
   public informationMessage: string
 
   signUp(signUpForm: NgForm) {
-
+    console.log("ateşlendi")
     this.authService.signUp(this.userRegisterDtoModel).subscribe((answer: boolean) => {
       if (answer) { // eğer doğru ise üyelik başarılı
         this.informationMessage = "Tebrikler, başarıyla üye oldunuz"

@@ -4,8 +4,30 @@ html, body{
     height: 100%;
     width:100%;
   }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-.mat-tab-labels {
-  justify-content: center;
-}
+
+  @media (min-width: 1250px) {
+    html {
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      justify-content: center;
+    }
+    body {
+      width: 1250px;
+    }
+  }
+  @media (min-width: 1750px) {
+    html {
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      justify-content: center;
+    }
+    body {
+      width: 1750px;
+    }
+  }
