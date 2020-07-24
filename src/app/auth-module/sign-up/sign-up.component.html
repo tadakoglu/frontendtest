@@ -111,12 +111,12 @@
               <label for="tuzelBelgeler" class="labelEl ">Tüzel Belgeler</label>
             </div>
             <div class="fright">
-              <div id="tuzelBelgelerArea" class="inputEl uploadBtn  "> <span> Belge Yükle </span> <img
+              <div id="tuzelBelgelerArea" (click)="tuzelBelgeler.click()" class="inputEl uploadBtn  "> <span> Belge Yükle </span> <img
                   src="../../../assets/icons/upload.png" class="uploadIcon " alt=""> </div>
 
               <!-- <p class="validationError">Dosya yüklemediniz</p> -->
             </div>
-            <input type="file" id="tuzelBelgeler" class="hiddenInput ">
+            <input type="file" id="tuzelBelgeler" #tuzelBelgeler class="hiddenInput ">
           </div>
           <div class="inputRegion clearfix mt15 ">
             <div class="centerize mt15"> <a (click)="signUpStep=2" class="orangeBtn ">Sonraki adım</a> </div>
@@ -146,7 +146,7 @@
             </div>
             <div class="fright">
               <input required placeholder="Parolanızı girin" id="parola" name="parola" #parola="ngModel"
-                [(ngModel)]="userRegisterDtoModel.Password" type="text" class="inputEl ">
+                [(ngModel)]="userRegisterDtoModel.Password" type="password" class="inputEl ">
               <p *ngIf="modelSubmitted && parola?.errors?.required" class="validationError">Parolanızı girmediniz.</p>
 
             </div>
@@ -157,7 +157,7 @@
             </div>
             <div class="fright">
               <input required placeholder="Parolanızı tekrarlayın" id="parolaTekrari" name="parolaTekrari"
-                #parolaTekrari="ngModel" [(ngModel)]="userRegisterDtoModel.ConfirmPassword" type="text"
+                #parolaTekrari="ngModel" [(ngModel)]="userRegisterDtoModel.ConfirmPassword" type="password"
                 class="inputEl ">
               <p *ngIf="modelSubmitted && parolaTekrari?.errors?.required" class="validationError">Parolanızı tekrar
                 girmediniz.</p>
