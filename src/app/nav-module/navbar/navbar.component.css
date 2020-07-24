@@ -1,0 +1,131 @@
+
+/* CSS Document */
+.navbar {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    width: 100%;
+    height: 100px;
+    background-color: #121420;
+    justify-content: space-between;
+    -ms-align-items: center;
+    align-items: center;
+  }
+  .logoSection {
+    padding-left: 5%;
+  }
+  .searchSection {
+    height: 100%;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    min-width: 30%;
+  }
+  .cartSection {
+    padding-right: 5%;
+  }
+  .logoText {
+    font-family: Rubik;
+    font-size: 32px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 1.47px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .sloganText {
+    font-family: Rubik;
+    font-size: 18px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #fff;
+  }
+  .cartImg {
+    width: 34px;
+    height: 34px;
+  }
+  .cartOval {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    border: solid 3px #121420;
+    background-color: #f27933;
+    border-radius: 50%;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .cartOval span {
+    color: #fff;
+  }
+  .searchInput {
+    background-color: transparent;
+    height: 100%;
+    ;
+    width: 100%;
+    border: 0px;
+    outline: 0px;
+    font-family: Rubik;
+    font-size: 17px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: white;
+  }
+  .navbar input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    font-family: Rubik;
+    font-size: 18px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #DBDBDB;
+  }
+  .navbar input::placeholder {
+    font-family: Rubik;
+    font-size: 18px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #DBDBDB;
+  }
+  .searchBar {
+    border-radius: 26px;
+    background-color: rgba(240, 240, 241, 0.15);
+    width: 100%;
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .searchBarImg {
+    width: 20px;
+    height: 20px;
+  }
+  .cartBtn {
+    margin-left: 20px;
+    position: relative;
+  }
+  
+  

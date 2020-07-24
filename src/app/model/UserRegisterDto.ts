@@ -7,12 +7,5 @@ export class UserRegisterDto {
     /**
      *
      */
-    constructor() {
-        this.Name=null;
-        this.LastName=null;
-        this.Email=null;
-        this.Password=null;
-        this.ConfirmPassword=null;
-        
-    }
+    constructor() {}
 }

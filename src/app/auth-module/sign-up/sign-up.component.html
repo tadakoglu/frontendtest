@@ -1,157 +1,188 @@
-<div class="navbar">
-    <div class="logoSection "> <span class="logoText">LOGO</span> <span class="sloganText ml10">Ürün kataloğu</span> </div>
-    <div class="searchSection ">
-      <div class="searchBar centerize"> <img src=" ../../../assets/icons/search-3-xxl.png" class="searchBarImg mr10" alt="">
-        <input type="text" placeholder="Ürün veya kategori arayın" class="searchInput ">
+<navbar></navbar>
+<div class="content ">
+  <div class="leftContent">
+    <div class="adArea pagePaddings ">
+      <div class="adContent  adAreaTitle"> Ayrıcalıklardan yaralanın... </div>
+      <div class="adContent ">
+        <div class="circle"></div>
+        <div class=" adText">
+          <h6>Yüksek Kalite</h6>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+        </div>
+      </div>
+      <div class="adContent ">
+        <div class="square"></div>
+        <div class=" adText">
+          <h6>Vadeli Ödeme</h6>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+        </div>
+      </div>
+      <div class="adContent ">
+        <div class="triangle"></div>
+        <div class=" adText">
+          <h6>Sipariş Takibi</h6>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+        </div>
+      </div>
+      <div class="adContent ">
+        <div class="pentagon"></div>
+        <div class=" adText">
+          <h6>Kolay İade</h6>
+          <p>Lorem ipsum dolor sit amet, consectetu Lorem ipsum dolor sit amet, consectetur adipisicing elitr
+            adipisicing elit Lorem ipsum dolor sit amet, consectetur adipisicing elit Lorem ipsum dolor sit amet,
+            consectetur adipisicing </p>
+        </div>
       </div>
     </div>
-    <div class="cartSection centerize "> <a href="" class="orangeBtn">Giriş Yap/Üye Ol</a> <a href="" class="cartBtn"> <img src="../../../assets/icons/cart-2-xxl.png" alt="" class="cartImg">
-      <div class="cartOval"> <span>0</span> </div>
-      </a> </div>
   </div>
-  <div class="content ">
-    <div class="leftContent">
-      <div class="adArea pagePaddings ">
-        <div class="adContent  adAreaTitle" > Ayrıcalıklardan yaralanın... </div>
-        <div class="adContent " >
-          <div class="circle"></div>
-          <div class=" adText">
-            <h6 >Yüksek Kalite</h6>
-            <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-          </div>
-        </div>
-        <div class="adContent ">
-          <div class="square"></div>
-          <div class=" adText" >
-            <h6>Vadeli Ödeme</h6>
-            <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-          </div>
-        </div>
-        <div class="adContent ">
-          <div class="triangle"></div>
-          <div class=" adText">
-            <h6>Sipariş Takibi</h6>
-            <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-          </div>
-        </div>
-        <div class="adContent ">
-          <div class="pentagon"></div>
-          <div class=" adText">
-            <h6>Kolay İade</h6>
-            <p >Lorem ipsum dolor sit amet, consectetu Lorem ipsum dolor sit amet, consectetur adipisicing elitr adipisicing elit Lorem ipsum dolor sit amet, consectetur adipisicing elit Lorem ipsum dolor sit amet, consectetur adipisicing </p>
-          </div>
-        </div>
+  <div class="rightContent pagePaddings">
+    <div class="tabHeader ">
+      <div class="tabBtnGroup " [ngClass]="{'tabBtnGroupActive': tab==1}" (click)="tab=1">
+        <div class="tabBtn centerize"><span class="tabBtnText">Giriş yap</span></div>
+        <div class="tabBtnLine "></div>
+      </div>
+      <div class="tabBtnGroup " [ngClass]="{'tabBtnGroupActive': tab==2}" (click)="tab=2">
+        <div class="tabBtn centerize"><span class="tabBtnText">Üye ol</span></div>
+        <div class="tabBtnLine"></div>
       </div>
     </div>
-    <div class="rightContent pagePaddings" >
-      <div class="tabHeader ">
-        <div class="tabBtnGroup tabBtnGroupActive ">
-          <div class="tabBtn centerize"><span class="tabBtnText">Giriş yap</span></div>
-          <div class="tabBtnLine "></div>
-        </div>
-        <div class="tabBtnGroup ">
-          <div class="tabBtn centerize"><span class="tabBtnText">Üye ol</span></div>
-          <div class="tabBtnLine"></div>
-        </div>
-      </div>
-      <div id="girisTab"></div>
-  
+    <div id="loginTab " *ngIf="tab==1">
+      <h4> Giriş yap bölümü burada yer alacak</h4>
+    </div>
+    <div id="signUpTab" *ngIf="tab==2">
+
       <form #signUpForm="ngForm" (ngSubmit)="signUp(signUpForm)" novalidate>
-      <div id="kayitTabStep1" >
-        <div class="inputRegion clearfix mt-30"> <span class="rTitle">Lütfen firmanıza ait bilgileri girin…</span> <span
-              class="rTitleMin">(1/2 adım)</span> </div>
-        <div class="inputRegion clearfix mt15">
-          <div class="fleft">
-            <label for="firmaAdi" class="labelEl">Firma Adı </label>
+
+        <div class="inputRegion clearfix mt-30"> <span class="infoMessage"> {{informationMessage}}</span> </div>
+
+        <div id="kayitTabStep1" *ngIf="signUpStep==1">
+          <div class="inputRegion clearfix mt-30"> <span class="rTitle">Lütfen firmanıza ait bilgileri girin…</span>
+            <span class="rTitleMin">(1/2 adım)</span> </div>
+          <div class="inputRegion clearfix mt15">
+            <div class="fleft">
+              <label for="firmaAdi" class="labelEl">Firma Adı </label>
+            </div>
+            <div class="fright">
+              <input placeholder="Firma adı girin" id="firmaAdi" name="firmaAdi" type="text" class="inputEl">
+              <!-- <p class="validationError">Şifreniz hatalı</p> -->
+            </div>
           </div>
-          <div class="fright">
-            <input placeholder="Firma adı girin" id="firmaAdi"  name="firmaAdi" #firmaAdi="ngModel" [(ngModel)]="userRegisterDtoModel.Email" type="text" class="inputEl">
-            <!-- <p class="validationError">Şifreniz hatalı</p> --> 
+          <div class="inputRegion clearfix mt15">
+            <div class="fleft">
+              <label for="vKimlikNo" class="labelEl ">Vergi Kimlik No </label>
+            </div>
+            <div class="fright">
+              <input placeholder="Vergi kimlik numaranızı girin" id="vKimlikNo" type="text" class="inputEl">
+              <!-- <p class="validationError">Şifreniz hatalı</p> -->
+            </div>
           </div>
-        </div>
-        <div class="inputRegion clearfix mt15">
-          <div class="fleft">
-            <label for="vKimlikNo" class="labelEl ">Vergi Kimlik No </label>
+          <div class="inputRegion clearfix mt15">
+            <div class="fleft">
+              <label for="sorumluKisiAd" class="labelEl ">Sorumlu Kişi Ad</label>
+            </div>
+            <div class="fright">
+              <input required placeholder="Ad  girin" id="sorumluKisiAd" name="sorumluKisiAd" #sorumluKisiAd [(ngModel)]="userRegisterDtoModel.Name" type="text" class="inputEl  ">
+              <p *ngIf="modelSubmitted && sorumluKisiAd?.errors?.required" class="validationError">Ad
+                girmelisiniz.</p>
+            </div>
           </div>
-          <div class="fright">
-            <input placeholder="Vergi kimlik numaranızı girin" id="vKimlikNo" type="text" class="inputEl">
-            <!-- <p class="validationError">Şifreniz hatalı</p> --> 
+          <div class="inputRegion clearfix mt15">
+            <div class="fleft">
+              <label for="sorumluKisiSoyad" class="labelEl ">Sorumlu Kişi Soyad</label>
+            </div>
+            <div class="fright">
+              <input required placeholder="Soyad girin" id="sorumluKisiSoyad" name="sorumluKisiSoyad" #sorumluKisiSoyad [(ngModel)]="userRegisterDtoModel.LastName" type="text" class="inputEl  ">
+              <p *ngIf="modelSubmitted && sorumluKisiSoyad?.errors?.required" class="validationError">Soyad
+                girmelisiniz.</p>
+            </div>
           </div>
-        </div>
-        <div class="inputRegion clearfix mt15">
-          <div class="fleft">
-            <label for="sorumluKisi" class="labelEl ">Sorumlu Kişi</label>
+          <div class="inputRegion clearfix mt15">
+            <div class="fleft">
+              <label for="sorumluKisiTel" class="labelEl ">Sorumlu Kişi Telefon No</label>
+            </div>
+            <div class="fright">
+              <input placeholder="Telefon no girin" id="sorumluKisiTel" type="text" class="inputEl ">
+              <!-- <p class="validationError">Telefon numarası girmediniz</p>
+              <p class="validationError">Telefon numaranız sorunludur</p> -->
+            </div>
           </div>
-          <div class="fright">
-            <input placeholder="Ad soyad girin" id="sorumluKisi" type="text" class="inputEl  ">
-            <!-- <p class="validationError">Şifreniz hatalı</p> --> 
+          <div class="inputRegion clearfix mt15">
+            <div class="fleft">
+              <label for="tuzelBelgeler" class="labelEl ">Tüzel Belgeler</label>
+            </div>
+            <div class="fright">
+              <div id="tuzelBelgelerArea" class="inputEl uploadBtn  "> <span> Belge Yükle </span> <img
+                  src="../../../assets/icons/upload.png" class="uploadIcon " alt=""> </div>
+
+              <!-- <p class="validationError">Dosya yüklemediniz</p> -->
+            </div>
+            <input type="file" id="tuzelBelgeler" class="hiddenInput ">
           </div>
-        </div>
-        <div class="inputRegion clearfix mt15">
-          <div class="fleft">
-            <label for="sorumluKisiTel" class="labelEl ">Sorumlu Kişi Telefon No</label>
-          </div>
-          <div class="fright">
-            <input placeholder="Telefon no girin" id="sorumluKisiTel" type="text" class="inputEl ">
-            <p class="validationError">Telefon numarası girmediniz</p>
-            <p class="validationError">Telefon numaranız sorunludur</p>
-          </div>
-        </div>
-        <div class="inputRegion clearfix mt15">
-          <div class="fleft">
-            <label for="tuzelBelgeler" class="labelEl ">Tüzel Belgeler</label>
-          </div>
-          <div class="fright">
-            <div id="tuzelBelgelerArea" class="inputEl uploadBtn  "> <span> Belge Yükle </span> <img src="upload.png" class="uploadIcon " alt=""> </div>
-            <p class="validationError">Dosya yüklemediniz</p>
-          </div>
-          <input type="file" id="tuzelBelgeler" class="hiddenInput ">
-        </div>
-        <div class="inputRegion clearfix mt15 ">
-          <div class="centerize mt15"> <a href="" class="orangeBtn ">Sonraki adım</a> </div>
-          <div class=" centerize mt15 "> <a href="" class="returnBtn ">Sayfaya geri dön</a> </div>
-        </div>
-      </div>
-      <div id="kayitTabStep2">
-        <div class="inputRegion clearfix mt15"> <span class="rTitle">Lütfen giriş yaparken kullanacağınız bilgileri girin…</span> <span class="rTitleMin">(2/2 adım)</span> </div>
-        <div class="inputRegion clearfix mt15">
-          <div class="fleft">
-            <label for="mailAdresi" class="labelEl ">Mail Adresi </label>
-          </div>
-          <div class="fright">
-            <input placeholder="mail@mail.com" id="mailAdresi" type="text" class="inputEl ">
-            <p class="validationError">mailAdresi girmediniz</p>
-          </div>
-        </div>
-        <div class="inputRegion clearfix mt15">
-          <div class="fleft">
-            <label for="parola" class="labelEl ">Parola </label>
-          </div>
-          <div class="fright">
-            <input placeholder="Parolanızı girin"  id="parola" type="text" class="inputEl ">
-            <p class="validationError">Parolanızı girmediniz</p>
+          <div class="inputRegion clearfix mt15 ">
+            <div class="centerize mt15"> <a (click)="signUpStep=2" class="orangeBtn ">Sonraki adım</a> </div>
+            <div class=" centerize mt15 "> <a class="returnBtn ">Sayfaya geri dön</a> </div>
           </div>
         </div>
-        <div class="inputRegion clearfix mt15">
-          <div class="fleft">
-            <label for="parolaTekrari" class="labelEl ">Parola Tekrarı </label>
+        <div id="kayitTabStep2" *ngIf="signUpStep==2">
+          <div class="inputRegion clearfix mt-30"> <span class="rTitle">Lütfen giriş yaparken kullanacağınız bilgileri
+              girin…</span> <span class="rTitleMin">(2/2 adım)</span> </div>
+          <div class="inputRegion clearfix mt15">
+            <div class="fleft">
+              <label for="mailAdresi" class="labelEl ">Mail Adresi </label>
+            </div>
+            <div class="fright">
+              <input required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="mail@mail.com"
+                id="mailAdresi" name="mailAdresi" #mailAdresi="ngModel" [(ngModel)]="userRegisterDtoModel.Email"
+                type="text" class="inputEl ">
+              <p *ngIf="modelSubmitted && mailAdresi?.errors?.pattern" class="validationError">Geçerli bir eposta adresi
+                girmediniz.</p>
+              <p *ngIf="modelSubmitted && mailAdresi?.errors?.required" class="validationError">Eposta adresi
+                girmelisiniz.</p>
+            </div>
           </div>
-          <div class="fright">
-            <input placeholder="Parolanızı tekrarlayın"  id="parolaTekrari" type="text" class="inputEl ">
-            <p class="validationError">Parolanızı tekrar girmediniz</p>
+          <div class="inputRegion clearfix mt15">
+            <div class="fleft">
+              <label for="parola" class="labelEl ">Parola </label>
+            </div>
+            <div class="fright">
+              <input required placeholder="Parolanızı girin" id="parola" name="parola" #parola="ngModel"
+                [(ngModel)]="userRegisterDtoModel.Password" type="text" class="inputEl ">
+              <p *ngIf="modelSubmitted && parola?.errors?.required" class="validationError">Parolanızı girmediniz.</p>
+
+            </div>
+          </div>
+          <div class="inputRegion clearfix mt15">
+            <div class="fleft">
+              <label for="parolaTekrari" class="labelEl ">Parola Tekrarı </label>
+            </div>
+            <div class="fright">
+              <input required placeholder="Parolanızı tekrarlayın" id="parolaTekrari" name="parolaTekrari"
+                #parolaTekrari="ngModel" [(ngModel)]="userRegisterDtoModel.ConfirmPassword" type="text"
+                class="inputEl ">
+              <p *ngIf="modelSubmitted && parolaTekrari?.errors?.required" class="validationError">Parolanızı tekrar
+                girmediniz.</p>
+            </div>
+          </div>
+          <div class="inputRegion clearfix mt15  ">
+            <div class="aggreement  centerize mt5">
+          
+              <input type="checkbox" id="agreement" name="agreement" #agreement [(ngModel)]="isAgreementChecked"
+                class=" mr5">
+                
+              <p>
+                <span class="aggreementTextOrange">Ön Bilgilendirme Koşulları</span>'nı ve <span
+                  class="aggreementTextOrange">Mesafeli Satış Sözleşmesi</span>'ni okudum, onaylıyorum </p>
+            </div>
+
+            <div class="centerize mt15">
+              <input value="Üye ol" id="Submit" type="submit" class="orangeBtn ">
+            </div>
+            <div class=" centerize mt15 "> <a (click)="signUpStep=1" class="returnBtn ">Sayfaya geri dön</a> </div>
           </div>
         </div>
-        <div class="inputRegion clearfix mt15  ">
-          <div class="aggreement  centerize mt5">
-            <input type="checkbox" class="fleft mr5">
-            <p class="fright"><span class="aggreementTextOrange">Ön Bilgilendirme Koşulları</span>'nı ve <span class="aggreementTextOrange">Mesafeli Satış Sözleşmesi</span>'ni okudum, onaylıyorum </p>
-          </div>
-          <div class="centerize mt15">
-            <input value="Üye ol" id="Submit" type="submit"  class="orangeBtn ">
-          </div>
-          <div class=" centerize mt15 "> <a  href=""  class="returnBtn ">Sayfaya geri dön</a> </div>
-        </div>
-      </div>
+
+
       </form>
     </div>
   </div>
+</div>

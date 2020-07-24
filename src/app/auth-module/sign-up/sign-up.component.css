@@ -1,12 +1,4 @@
-.fright {
-  float: right;
-}
-.fleft {
-  float: left;
-}
-.hide {
-  display: none;
-}
+
 .inputEl {
   /*Chrome, Safari*/
   /* Chrome and Safari */
@@ -81,13 +73,7 @@ input::-webkit-input-placeholder { /* Edge */
   display: block;
   width: 100%;
 }
-.clearfix:after {
-  content: " "; /* Older browser do not support empty content */
-  visibility: hidden;
-  display: block;
-  height: 0;
-  clear: both;
-}
+
 .rTitle {
   height: 28px;
   font-family: Rubik;
@@ -114,76 +100,7 @@ input::-webkit-input-placeholder { /* Edge */
 .dblock {
   display: block;
 }
-.orangeBtn {
-  width: 300px;
-  height: 50px;
-  border-radius: 7px;
-  display: flex;
-  -ms-align-items: center;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  font-family: Rubik;
-  font-size: 16px;
-  font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #ffffff;
-  background-color: #f27933;
-  border-width: 0px;
-  border: none;
-  outline: 0;
-  cursor: pointer;
-}
-.orangeBtn:focus {
-  outline: none !important
-}
-.returnBtn {
-  width: 300px;
-  height: 50px;
-  border-radius: 7px;
-  display: flex;
-  -ms-align-items: center;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  font-family: Rubik;
-  font-size: 16px;
-  font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #ffffff;
-  background-color: #787a80;
-}
-.centerize {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  justify-content: center;
-  -ms-align-items: center;
-  align-items: center;
-}
-.mb5 {
-  margin-bottom: 5px;
-}
-.mt5 {
-  margin-top: 5px;
-}
-.mr5 {
-  margin-right: 5px;
-}
-.ml5 {
-  margin-left: 5px;
-}
-.mt15 {
-  margin-top: 15px;
-}
+
 .aggreement {
   margin-left: 10%;
   margin-right: 10%;
@@ -193,19 +110,16 @@ input::-webkit-input-placeholder { /* Edge */
   border-radius: 17px;
   border: solid 1px rgba(207, 210, 212, 0.5);
   background-color: rgba(127, 146, 186, 0.08);
+  
 }
 .aggreementTextOrange {
   color: #ff7000;
   font-weight: 550;
   cursor: pointer;
 }
-input[type=checkbox] {
-  cursor: pointer;
-  width: 20px;
-  height: 20px;
-  border-radius: 5px;
-  border: solid 1px #cfd2d4;
-  background-color: rgba(207, 210, 212, 0.2);
+.infoMessage{
+  color: rgb(206, 22, 22);
+  font-size: 18px;
 }
 .tabHeader {
   height: 80px;
@@ -230,9 +144,7 @@ input[type=checkbox] {
   background: #F8F8F8;
   cursor: pointer;
 }
-.mb50 {
-  margin-bottom: 50px;
-}
+
 .tabBtn {
   height: 75px;
   width: 100%;
@@ -258,9 +170,15 @@ input[type=checkbox] {
   letter-spacing: normal;
   text-align: center;
   color: #2d2d2d;
+
+
 }
 .tabBtnGroupActive .tabBtnLine {
   background-color: #f18c51;
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  transition: all 1s ease-out;
 }
 .tabBtnGroupActive .tabBtnText {
   font-family: Rubik;
@@ -378,24 +296,14 @@ input[type=checkbox] {
   width: 55%;
   height: 100%;
 }
-.ml10 {
-  margin-left: 10px;
-}
-.mr10 {
-  margin-right: 10px;
-}
+
 .pagePaddings {
   padding-left: 8%;
   padding-right: 8%;
   padding-top: 30px;
   padding-bottom: 50px
 }
-.h100 {
-  height: 100%;
-}
-.w100 {
-  width: 100%;
-}
+
 .adContent {
   margin-bottom: 30px;
   display: -webkit-flex;
@@ -459,9 +367,7 @@ input[type=checkbox] {
   color: #ffffff;
   text-align: left;
 }
-.mt-30 {
-  margin-top: 30px;
-}
+
 .validationError {
   font-family: Rubik;
   font-size: 16px;
@@ -476,134 +382,4 @@ input[type=checkbox] {
   width: 70%;
 }
 
-
-
-/* CSS Document */
-.navbar {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  width: 100%;
-  height: 100px;
-  background-color: #121420;
-  justify-content: space-between;
-  -ms-align-items: center;
-  align-items: center;
-}
-.logoSection {
-  padding-left: 5%;
-}
-.searchSection {
-  height: 100%;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  -ms-align-items: center;
-  align-items: center;
-  min-width: 30%;
-}
-.cartSection {
-  padding-right: 5%;
-}
-.logoText {
-  font-family: Rubik;
-  font-size: 32px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: 1.47px;
-  color: rgba(255, 255, 255, 0.8);
-}
-.sloganText {
-  font-family: Rubik;
-  font-size: 18px;
-  font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #fff;
-}
-.cartImg {
-  width: 34px;
-  height: 34px;
-}
-.cartOval {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  width: 20px;
-  height: 20px;
-  border: solid 3px #121420;
-  background-color: #f27933;
-  border-radius: 50%;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  -ms-align-items: center;
-  align-items: center;
-  justify-content: center;
-}
-.cartOval span {
-  color: #fff;
-}
-.searchInput {
-  background-color: transparent;
-  height: 100%;
-  ;
-  width: 100%;
-  border: 0px;
-  outline: 0px;
-  font-family: Rubik;
-  font-size: 17px;
-  font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: white;
-}
-.navbar input:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  font-family: Rubik;
-  font-size: 18px;
-  font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #DBDBDB;
-}
-.navbar input::placeholder {
-  font-family: Rubik;
-  font-size: 18px;
-  font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #DBDBDB;
-}
-.searchBar {
-  border-radius: 26px;
-  background-color: rgba(240, 240, 241, 0.15);
-  width: 100%;
-  height: 50px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-.searchBarImg {
-  width: 20px;
-  height: 20px;
-}
-.cartBtn {
-  margin-left: 20px;
-  position: relative;
-}
 

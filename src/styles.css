@@ -1,9 +1,9 @@
 html, body{
     margin: 0;
     padding: 0;
-    height: 100%;
-    width:100%;
-  }
+    /* height: 100%;
+    width:100%; */
+  } 
 
   @media (min-width: 1250px) {
     html {
@@ -30,4 +30,118 @@ html, body{
     body {
       width: 1750px;
     }
+  }
+
+  .mt-30 {
+    margin-top: 30px;
+  }
+  .mb50 {
+    margin-bottom: 50px;
+  }
+  input[type=checkbox] {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    border: solid 1px #cfd2d4;
+    background-color: rgba(207, 210, 212, 0.2);
+  }
+  .orangeBtn {
+    width: 300px;
+    height: 50px;
+    border-radius: 7px;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-family: Rubik;
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+    background-color: #f27933;
+    border-width: 0px;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+  }
+  .orangeBtn:focus {
+    outline: none !important
+  }
+  .returnBtn {
+    width: 300px;
+    height: 50px;
+    border-radius: 7px;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-family: Rubik;
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+    background-color: #787a80;
+    cursor: pointer;
+  }
+  .centerize {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+  }
+  .mb5 {
+    margin-bottom: 5px;
+  }
+  .mt5 {
+    margin-top: 5px;
+  }
+  .mr5 {
+    margin-right: 5px;
+  }
+  .ml5 {
+    margin-left: 5px;
+  }
+  .mt15 {
+    margin-top: 15px;
+  }
+  .clearfix:after {
+    content: " "; /* Older browser do not support empty content */
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+  }
+  .fright {
+    float: right;
+  }
+  .fleft {
+    float: left;
+  }
+  .hide {
+    display: none;
+  }
+  .h100 {
+    height: 100%;
+  }
+  .w100 {
+    width: 100%;
+  }
+  .ml10 {
+    margin-left: 10px;
+  }
+  .mr10 {
+    margin-right: 10px;
   }
